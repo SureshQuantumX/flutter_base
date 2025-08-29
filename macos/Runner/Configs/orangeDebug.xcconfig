@@ -1,0 +1,6 @@
+#include "../../Flutter/orangeDebug.xcconfig"
+#include "Warnings.xcconfig"
+
+ASSET_PREFIX=orange
+BUNDLE_NAME=Orange App
+BUNDLE_DISPLAY_NAME=Orange App

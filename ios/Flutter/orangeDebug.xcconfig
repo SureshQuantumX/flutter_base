@@ -1,0 +1,6 @@
+#include? "Pods/Target Support Files/Pods-Runner/Pods-Runner.debug.xcconfig"
+#include "Generated.xcconfig"
+
+ASSET_PREFIX=orange
+BUNDLE_NAME=Orange App
+BUNDLE_DISPLAY_NAME=Orange App
