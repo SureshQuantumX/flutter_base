@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_base/gen/assets.gen.dart';
-import '../flavors.dart';
+import 'package:flutter_base/core/gen/assets.gen.dart';
+import '../../flavors.dart';
 
 @RoutePage()
 class MyHomePage extends StatelessWidget {

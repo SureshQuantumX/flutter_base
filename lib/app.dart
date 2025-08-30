@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_base/R&D/get_it/get_it_test.dart';
-import 'package:flutter_base/di/get_it.dart';
-import 'package:flutter_base/utils/app_router.dart';
+import 'package:flutter_base/features/R&D/get_it/get_it_test.dart';
+import 'package:flutter_base/core/di/get_it.dart';
+import 'package:flutter_base/config/router/app_router.dart';
 import 'flavors.dart';
 
 class App extends StatefulWidget {

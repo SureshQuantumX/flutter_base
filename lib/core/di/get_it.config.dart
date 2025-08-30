@@ -12,7 +12,7 @@
 import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
 
-import '../utils/app_router.dart' as _i53;
+import '../../config/router/app_router.dart' as _i238;
 
 extension GetItInjectableX on _i174.GetIt {
   // initializes the registration of main-scope dependencies inside of GetIt
@@ -21,7 +21,7 @@ extension GetItInjectableX on _i174.GetIt {
     _i526.EnvironmentFilter? environmentFilter,
   }) {
     final gh = _i526.GetItHelper(this, environment, environmentFilter);
-    gh.lazySingleton<_i53.AppRouter>(() => _i53.AppRouter());
+    gh.lazySingleton<_i238.AppRouter>(() => _i238.AppRouter());
     return this;
   }
 }

@@ -10,9 +10,9 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i4;
-import 'package:flutter_base/R&D/get_it/get_it_test.dart' as _i1;
-import 'package:flutter_base/R&D/my_home_page.dart' as _i2;
-import 'package:flutter_base/R&D/page_two.dart' as _i3;
+import 'package:flutter_base/features/R&D/get_it/get_it_test.dart' as _i1;
+import 'package:flutter_base/features/R&D/my_home_page.dart' as _i2;
+import 'package:flutter_base/features/R&D/page_two.dart' as _i3;
 
 /// generated route for
 /// [_i1.GetItTest]
