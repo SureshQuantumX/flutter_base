@@ -1,6 +1,8 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 
+@RoutePage()
 class GetItTest extends StatefulWidget {
   const GetItTest({super.key});
 

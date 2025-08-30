@@ -1,9 +1,14 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:injectable/injectable.dart';
 
 import 'app_router.gr.dart';
 
+@LazySingleton()
 @AutoRouterConfig()
 class AppRouter extends RootStackRouter {
   @override
-  List<AutoRoute> get routes => [AutoRoute(page: RouteTwo.page, initial: true)];
+  List<AutoRoute> get routes => [
+    AutoRoute(page: RouteTwo.page),
+    AutoRoute(page: GetItTest.page, initial: true),
+  ];
 }

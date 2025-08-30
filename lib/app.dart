@@ -1,16 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_base/R&D/get_it/get_it_test.dart';
+import 'package:flutter_base/di/get_it.dart';
+import 'package:flutter_base/utils/app_router.dart';
 import 'flavors.dart';
 
-class App extends StatelessWidget {
+class App extends StatefulWidget {
   const App({super.key});
 
   @override
+  State<App> createState() => _AppState();
+}
+
+class _AppState extends State<App> {
+  final appRouter = getIt<AppRouter>();
+  @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: F.title,
+      routerConfig: appRouter.config(),
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: _flavorBanner(child: GetItTest(), show: false),
     );
   }
 
