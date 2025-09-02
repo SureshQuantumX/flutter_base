@@ -3,5 +3,5 @@ class ApiConstants {
   static const String baseUrl = "https://jsonplaceholder.typicode.com";
 
   ApiConstants._();
-  static const String posts = "/posts";
+  static const String posts = "$baseUrl/posts";
 }

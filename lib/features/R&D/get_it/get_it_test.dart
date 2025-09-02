@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_base/config/router/app_router.gr.dart';
 import 'package:get_it/get_it.dart';
 
 @RoutePage()
@@ -31,6 +32,12 @@ class _GetItTestState extends State<GetItTest> {
               setState(() {});
             },
             child: const Text('Unregister'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              context.router.push(JphPostsRoute());
+            },
+            child: Text('Go to JPH Posts'),
           ),
         ],
       ),
