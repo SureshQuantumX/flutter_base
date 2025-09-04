@@ -33,8 +33,8 @@ extension GetItInjectableX on _i174.GetIt {
   }) {
     final gh = _i526.GetItHelper(this, environment, environmentFilter);
     final injectionModule = _$InjectionModule();
-    gh.lazySingleton<_i238.AppRouter>(() => _i238.AppRouter());
     gh.lazySingleton<_i361.Dio>(() => injectionModule.dio());
+    gh.lazySingleton<_i238.AppRouter>(() => _i238.AppRouter());
     gh.lazySingleton<_i277.ApiClient>(() => _i277.ApiClient(gh<_i361.Dio>()));
     gh.lazySingleton<_i8.JphRemoteDataSource>(
       () => _i8.JphRemoteDataSourceImpl(apiClient: gh<_i277.ApiClient>()),

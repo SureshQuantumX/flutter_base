@@ -1,8 +1,8 @@
-import 'dart:developer';
-
 import 'package:dio/dio.dart';
 import 'package:flutter_base/core/api/auth_interceptor.dart';
+import 'package:flutter_base/main.dart';
 import 'package:injectable/injectable.dart';
+import 'package:logarte/logarte.dart';
 
 @LazySingleton()
 class ApiClient {
@@ -15,7 +15,7 @@ class ApiClient {
         responseBody: false,
         responseHeader: false,
       ),
-      // LogarteDioInterceptor(logarte),
+      LogarteDioInterceptor(logarte),
       AuthInterceptor(),
     ]);
   }
