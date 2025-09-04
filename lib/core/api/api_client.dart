@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:dio/dio.dart';
 import 'package:flutter_base/core/api/auth_interceptor.dart';
 import 'package:injectable/injectable.dart';
@@ -38,7 +40,7 @@ class ApiClient {
   Future<dynamic> get(
     String path, {
     Map<String, dynamic>? queryParams,
-    bool requiresToken = true,
+    bool requiresToken = false,
     Map<String, dynamic>? headers,
     bool shouldReturnDirectResult = false,
     CancelToken? cancelToken,
@@ -51,6 +53,7 @@ class ApiClient {
         options: Options(headers: requestHeaders),
         cancelToken: cancelToken,
       );
+
       if (shouldReturnDirectResult) {
         return response.data;
       }

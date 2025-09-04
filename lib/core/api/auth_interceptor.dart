@@ -24,8 +24,18 @@ class AuthInterceptor extends QueuedInterceptor {
   void onRequest(
     RequestOptions options,
     RequestInterceptorHandler handler,
-  ) async {}
+  ) async {
+    // // Example: check if token required
+    // if (options.headers['requiresToken'] == true) {
+    //   // attach token if you have
+    //   options.headers['Authorization'] = 'Bearer YOUR_TOKEN';
+    // }
+
+    handler.next(options);
+  }
 
   @override
-  void onError(DioException err, ErrorInterceptorHandler handler) {}
+  void onError(DioException err, ErrorInterceptorHandler handler) {
+    handler.next(err);
+  }
 }

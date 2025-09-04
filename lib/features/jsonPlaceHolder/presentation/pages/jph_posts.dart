@@ -1,7 +1,7 @@
+import 'dart:developer';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_base/core/di/get_it.dart';
-import 'package:flutter_base/core/error/app_error.dart';
 import 'package:flutter_base/features/jsonPlaceHolder/presentation/cubit/jph_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -20,20 +20,19 @@ class JphPostsPage extends StatelessWidget implements AutoRouteWrapper {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('JPH Posts')),
-      body: Column(
-        children: [
-          SafeArea(
-            child: BlocConsumer<JphCubit, JphState>(
+      body: SafeArea(
+        child: Column(
+          children: [
+            BlocConsumer<JphCubit, JphState>(
               listener: (context, state) {
+                log('state $state');
                 if (state is JphError) {
-                  return context.showSnackBar(
-                    SnackBar(content: Text('Error: ${state.error}')),
-                  );
+                  log('state error ${state.error}');
                 }
               },
               builder: (context, state) {
                 if (state is JphLoading) {
-                  return CircularProgressIndicator();
+                  return Center(child: CircularProgressIndicator());
                 } else if (state is JphError) {
                   return Text('Error: ${state.error}');
                 } else if (state is JphLoaded) {
@@ -45,21 +44,19 @@ class JphPostsPage extends StatelessWidget implements AutoRouteWrapper {
                         return ListTile(
                           title: Text(post.title),
                           subtitle: Text(post.body),
+                          leading: Text(post.id.toString()),
                         );
                       },
                     ),
                   );
                 }
+
                 return Text('Press the button to fetch posts');
               },
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
-}
-
-extension on BuildContext {
-  void showSnackBar(SnackBar snackBar) {}
 }

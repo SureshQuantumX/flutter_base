@@ -1,4 +1,4 @@
-import 'dart:math';
+import 'dart:developer';
 
 import 'package:equatable/equatable.dart';
 import 'package:flutter_base/core/error/app_error.dart';
@@ -16,11 +16,7 @@ class JphCubit extends Cubit<JphState> {
   final JphRepository repository;
   Future<void> fetchPosts() async {
     emit(JphLoading());
-    final res = repository.fetchPosts();
-
-    res.then((value) {
-      [print('res $value')];
-      value.fold((l) => emit(JphError(l)), (r) => emit(JphLoaded(r)));
-    });
+    final res = await repository.fetchPosts();
+    emit(res.fold((l) => JphError(l), (r) => JphLoaded(r)));
   }
 }

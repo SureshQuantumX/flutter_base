@@ -9,7 +9,7 @@ class AppRouter extends RootStackRouter {
   @override
   List<AutoRoute> get routes => [
     AutoRoute(page: RouteTwo.page),
-    AutoRoute(page: GetItTest.page, initial: true),
-    AutoRoute(page: JphPostsRoute.page),
+    AutoRoute(page: GetItTest.page),
+    AutoRoute(page: JphPostsRoute.page, initial: true),
   ];
 }
