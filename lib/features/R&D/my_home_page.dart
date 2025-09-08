@@ -2,7 +2,6 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_base/config/router/app_router.gr.dart';
 import 'package:flutter_base/core/gen/assets.gen.dart';
-import 'package:flutter_base/features/jsonPlaceHolder/presentation/pages/jph_posts.dart';
 import '../../flavors.dart';
 
 @RoutePage()

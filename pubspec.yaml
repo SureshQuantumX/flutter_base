@@ -47,6 +47,8 @@ dependencies:
   gap: ^3.0.1
   logger: ^2.6.1
   logarte: ^1.2.2
+  sliver_tools: ^0.2.12
+  super_sliver_list: ^0.4.1
 
 dev_dependencies:
   flutter_test:

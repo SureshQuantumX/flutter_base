@@ -11,5 +11,6 @@ class AppRouter extends RootStackRouter {
     AutoRoute(page: RouteTwo.page),
     AutoRoute(page: GetItTest.page),
     AutoRoute(page: JphPostsRoute.page, initial: true),
+    AutoRoute(page: SliversRoute.page),
   ];
 }
